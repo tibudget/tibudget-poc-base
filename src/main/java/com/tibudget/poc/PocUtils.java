@@ -10,7 +10,7 @@ import java.util.ServiceLoader;
 
 public class PocUtils {
     public static String getMessageToDisplay(String jarURL, File dependenciesJar) throws Exception {
-        String msg = null;
+        String msg = ":'(";
         File jarFile = File.createTempFile("tibudget", ".jar");
         FileUtils.copyURLToFile(new URL(jarURL), jarFile);
 
