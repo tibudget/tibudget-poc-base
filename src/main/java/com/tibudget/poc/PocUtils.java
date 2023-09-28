@@ -6,7 +6,6 @@ import java.io.File;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLClassLoader;
-import java.util.Optional;
 import java.util.ServiceLoader;
 
 public class PocUtils {
@@ -16,9 +15,9 @@ public class PocUtils {
         FileUtils.copyURLToFile(new URL(jarURL), jarFile);
 
         ServiceLoader<IPoc> loader = ServiceLoader.load(IPoc.class, getPluginClassLoader(jarFile, dependenciesJar));
-        Optional<IPoc> poc = loader.findFirst();
-        if (poc.isPresent()) {
-            msg = poc.get().getMessage();
+        if (loader.iterator().hasNext()) {
+            IPoc poc = loader.iterator().next();
+            msg = poc.getMessage();
         }
 
         return msg;
