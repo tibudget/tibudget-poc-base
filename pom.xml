@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.tibudget</groupId>
     <artifactId>tibudget-poc-base</artifactId>
-    <version>1.2-SNAPSHOT</version>
+    <version>1.2</version>
     <packaging>jar</packaging>
 
     <name>ti'Budget POC base</name>
@@ -22,7 +22,7 @@
         <connection>scm:git:${project.scm.url}</connection>
         <developerConnection>scm:git:${project.scm.url}</developerConnection>
         <url>https://github.com/tibudget/tibudget-poc-base.git</url>
-        <tag>tibudget-poc-base-1.0</tag>
+        <tag>tibudget-poc-base-1.2</tag>
     </scm>
 
     <distributionManagement>
